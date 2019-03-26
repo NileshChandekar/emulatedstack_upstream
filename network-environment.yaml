@@ -1,0 +1,44 @@
+parameter_defaults:
+    ControlPlaneDefaultRoute: 192.168.24.1
+    ControlPlaneSubnetCidr: '24'
+    DnsServers:
+    - 192.168.100.1
+    EC2MetadataIp: 192.168.24.1
+    ExternalAllocationPools:
+    -   end: 192.168.100.190
+        start: 192.168.100.181
+    ExternalInterfaceDefaultRoute: 192.168.100.1
+    ExternalNetCidr: 192.168.100.0/24
+    #ExternalNetworkVlanID: 10
+    InternalApiAllocationPools:
+    -   end: 192.168.124.200
+        start: 192.168.124.20
+    InternalApiNetCidr: 192.168.124.0/24
+    InternalApiNetworkVlanID: 201
+    NeutronBridgeMappings: datacentre:br-ex;tenant:br-isolated
+    NeutronExternalNetworkBridge: ''
+    NeutronNetworkType: vxlan
+    NeutronNetworkVLANRanges: tenant:1000:2000
+    NeutronTunnelTypes: vxlan
+    StorageAllocationPools:
+    -   end: 192.168.125.200
+        start: 192.168.125.20
+    StorageMgmtAllocationPools:
+    -   end: 192.168.128.60
+        start: 192.168.128.30
+    StorageMgmtNetCidr: 192.168.128.0/24
+    StorageMgmtNetworkVlanID: 202
+    StorageNetCidr: 192.168.125.0/24
+    StorageNetworkVlanID: 203
+    TenantAllocationPools:
+    -   end: 192.168.123.200
+        start: 192.168.123.20
+    TenantNetCidr: 192.168.123.0/24
+    TenantNetworkVlanID: 204
+    BondInterfaceOvsOptions: 'bond_mode=balance-tcp lacp=active' 
+resource_registry:
+    #OS::TripleO::BlockStorage::Net::SoftwareConfig: three-nics-vlans/legacy/cinder-storage.yaml
+    #OS::TripleO::CephStorage::Net::SoftwareConfig: three-nics-vlans/legacy/ceph-storage.yaml
+    OS::TripleO::Compute::Net::SoftwareConfig: /home/stack/templates/compute.yaml
+    OS::TripleO::Controller::Net::SoftwareConfig: /home/stack/templates/controller.yaml
+    #OS::TripleO::ObjectStorage::Net::SoftwareConfig: three-nics-vlans/legacy/swift-storage.yaml
