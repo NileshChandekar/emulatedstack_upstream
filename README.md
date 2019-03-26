@@ -3,8 +3,8 @@
 * Clone this repository under your ``/home/stack/templates`` directory.
 
   ~~~
-  git clone git@github.com:NileshChandekar/emulatedstack_upstream.git
+  git clone https://github.com/NileshChandekar/emulatedstack_upstream.git
   ~~~
 
 * Run ``deploy.sh``
-* Make sure to check ``node-info.yaml`` 
+* Make sure to check ``node-info.yaml``
