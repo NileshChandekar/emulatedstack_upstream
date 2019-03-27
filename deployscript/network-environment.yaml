@@ -36,7 +36,6 @@ parameter_defaults:
     TenantNetCidr: 192.168.123.0/24
     TenantNetworkVlanID: 204
     BondInterfaceOvsOptions: 'bond_mode=balance-tcp lacp=active' 
-    NetworkDeploymentActions: ['CREATE','UPDATE']
 resource_registry:
     #OS::TripleO::BlockStorage::Net::SoftwareConfig: three-nics-vlans/legacy/cinder-storage.yaml
     #OS::TripleO::CephStorage::Net::SoftwareConfig: three-nics-vlans/legacy/ceph-storage.yaml
