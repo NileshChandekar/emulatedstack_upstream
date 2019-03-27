@@ -15,7 +15,7 @@ parameter_defaults:
         start: 192.168.124.20
     InternalApiNetCidr: 192.168.124.0/24
     InternalApiNetworkVlanID: 201
-    NeutronBridgeMappings: datacentre:br-ex;tenant:br-isolated
+    NeutronBridgeMappings: "datacentre:br-ex,tenant:br-isolated"
     NeutronExternalNetworkBridge: ''
     NeutronNetworkType: vxlan
     NeutronNetworkVLANRanges: tenant:1000:2000
@@ -36,6 +36,7 @@ parameter_defaults:
     TenantNetCidr: 192.168.123.0/24
     TenantNetworkVlanID: 204
     BondInterfaceOvsOptions: 'bond_mode=balance-tcp lacp=active' 
+    NetworkDeploymentActions: ['CREATE','UPDATE']
 resource_registry:
     #OS::TripleO::BlockStorage::Net::SoftwareConfig: three-nics-vlans/legacy/cinder-storage.yaml
     #OS::TripleO::CephStorage::Net::SoftwareConfig: three-nics-vlans/legacy/ceph-storage.yaml
