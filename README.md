@@ -1,4 +1,4 @@
-# TripleO Openstack - Queens - Installtion  
+# TripleO Openstack - Queens - Installation  
 
 	Script Tested and working on RDO/TripleO - Queens
 
