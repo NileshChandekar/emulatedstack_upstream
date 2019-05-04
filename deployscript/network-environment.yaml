@@ -1,5 +1,5 @@
 parameter_defaults:
-    NetworkDeploymentActions: ['CREATE','UPDATE']
+    #NetworkDeploymentActions: ['CREATE','UPDATE']
     ControlPlaneDefaultRoute: 192.168.100.1
     ControlPlaneSubnetCidr: '24'
     DnsServers:
